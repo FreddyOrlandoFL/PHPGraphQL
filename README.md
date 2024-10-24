@@ -53,44 +53,22 @@ composer require webonyx/graphql-php
 ```
 
 
-### Ejemplo de uso
-### En tu punto de entrada (public/index.php), puedes definir un esquema básico de GraphQL de la siguiente manera:
-```bash
-    <?php
-        require 'vendor/autoload.php';
-
-        use GraphQL\Type\Definition\ObjectType;
-        use GraphQL\Type\Definition\Type;
-        use GraphQL\Schema;
-        use GraphQL\GraphQL;
-
-        $schema = new Schema([
-            'query' => new ObjectType([
-                'name' => 'RootQueryType',
-                'fields' => [
-                    'hello' => [
-                        'type' => Type::string(),
-                        'resolve' => function() {
-                            return 'Hola Mundo';
-                        }
-                    ]
-                ]
-            ])
-        ]);
-
-        $rawInput = file_get_contents('php://input');
-        $input = json_decode($rawInput, true);
-        $query = $input['query'];
-
-        $result = GraphQL::executeQuery($schema, $query);
-        $output = $result->toArray();
-
-        header('Content-Type: application/json');
-        echo json_encode($output);
-```
 ### Recursos adicionales
-### Documentación oficial de GraphQL PHP
-### Composer
+### BASE DE DATOS se hizo el ejemplo con mysql el archivo database.sql es para ejecutarse en una base de datos mysql y asi poder realizar la prueba
+
+### PAYLOAD EJEMPLO
+
+```bash
+{
+  user(id: 1){
+    id,
+    first_name,
+    last_name,
+    email
+  }
+}
+```
+### Para probar la Api hecha en GraphQL instale en Google Chrome la extension GraphiQL luego de instalarla al activarla coloque la url a consumir y en la consola de la izquierda coloque el payload puede usar el facilitado en el ejemplo o usar otro payload
 
 ### Contribuciones
 ### ¡Las contribuciones son bienvenidas! Por favor, abre un issue o crea un pull request si deseas mejorar el proyecto.
