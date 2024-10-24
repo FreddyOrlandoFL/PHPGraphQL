@@ -22,3 +22,8 @@ Clona este repositorio en tu máquina local:
 git clone https://github.com/usuario/nombre-del-proyecto.git
 cd nombre-del-proyecto
 
+```
+
+```bash
+composer require webonyx/graphql-php
+```
