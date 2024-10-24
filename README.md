@@ -88,3 +88,15 @@ composer require webonyx/graphql-php
         header('Content-Type: application/json');
         echo json_encode($output);
 ```
+### Recursos adicionales
+### Documentación oficial de GraphQL PHP
+### Composer
+
+### Contribuciones
+### ¡Las contribuciones son bienvenidas! Por favor, abre un issue o crea un pull request si deseas mejorar el proyecto.
+
+### Licencia
+### Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+```bash
+    Este README proporciona una guía paso a paso para configurar e instalar la librería `graphql-php` y un ejemplo básico para que los desarrolladores puedan comenzar a trabajar con una API GraphQL en PHP.
+```
